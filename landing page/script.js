@@ -91,53 +91,6 @@
 `
   },
 
-  "offline-purchase": {
-    title: "Offline Purchase — How it works",
-    meta: "Queue transactions and process them when connectivity returns",
-    content: `
-<p><strong>What it is</strong><br/>Offline Purchase enables users to initiate purchases when they have limited or no internet connectivity (USSD users, intermittent mobile data, or in-store POS). The app queues requests locally or via a lightweight SMS/USSD relay so purchases can be finalized when connectivity or a network relay is available.</p>
-
-<p><strong>How it works</strong><br/>When the user initiates an offline purchase, BlueSea records the transaction details in a secure local queue (encrypted on device) with a timestamp and required confirmation rules. The UI gives clear status states (Queued, Pending, Complete, Failed). The client retries automatically when connectivity returns or can use a store/merchant gateway to forward the request. For merchant POS integrations, the store can upload a batch of offline orders for reconciliation. Server-side reconciliation verifies vouchers or airtime allocations and credits the wallet or notifies the merchant when successful. Clear timeouts and rollback rules ensure funds are protected if the transaction cannot be completed within the allowed window.</p>
-
-<p><strong>Why it's useful</strong><br/>Offline Purchase is essential for users in low-connectivity areas and for retail partners that depend on reliable purchase finalization. It increases successful transactions, reduces frustration and chargebacks, and expands BlueSea’s addressable market into regions with intermittent networks.</p>
-`
-  },
-
-  "ai-assistant": {
-    title: "AI Assistance — How it works",
-    meta: "Smart recommendations, troubleshooting, and automated flows",
-    content: `
-<p><strong>What it is</strong><br/>The AI Assistant is a contextual helper built into BlueSea that provides personalized recommendations, automates repetitive tasks (like scheduled top-ups), and gives step-by-step troubleshooting. It’s privacy-first and focused on saving users time and money.</p>
-
-<p><strong>How it works</strong><br/>The assistant analyzes anonymized transaction patterns, device and network usage, and user preferences to generate suggestions: bundle recommendations, ideal refill cadence, and alerts for expiring bonuses. It can perform guided flows (e.g., 'sell leftover airtime', 'split rent'), create scheduled rules (auto top-up when balance drops below X), and escalate complex issues to human support with a summarized transcript. The assistant also supports natural language prompts inside the app (typed or voice) and exposes safe automations that users must confirm before execution.</p>
-
-<p><strong>Why it's useful</strong><br/>AI reduces friction and improves outcomes — users find the best deals faster, avoid overbuying, and receive proactive help before problems escalate. For BlueSea, the assistant increases product stickiness, reduces customer support load, and helps monetize intelligent upsells aligned with user needs.</p>
-`
-  },
-
-  "qr-purchases": {
-    title: "QR Code Purchases — How it works",
-    meta: "Scan to buy without typing numbers",
-    content: `
-<p><strong>What it is</strong><br/>QR Code Purchases let users scan merchant or biller QR codes to populate payment details automatically — no manual entry of account numbers or voucher codes. The QR may encode merchant ID, amount, invoice reference, or a BlueSea payment code.</p>
-
-<p><strong>How it works</strong><br/>When a user scans a QR the app decodes the payload and pre-fills a secure payment confirmation screen showing merchant name, amount, and any fees. The user confirms and authorizes the payment via PIN, biometrics, or wallet balance. The system verifies the payload (digital signature or server validation) to prevent tampered QR codes. For merchants without live connectivity, a dynamic QR plus an offline code exchange (merchant prints a code, user scans and the app queues the payment) can be used.</p>
-
-<p><strong>Why it's useful</strong><br/>QR reduces errors, speeds checkout, and eliminates the friction of typing long numbers. It’s ideal for street vendors, merchants, and utilities where speed matters. For BlueSea, QR adoption grows transaction volume and creates partnering opportunities with offline merchants and event vendors.</p>
-`
-  },
-
-  "crypto-support": {
-    title: "Cryptocurrency Support — How it works",
-    meta: "Deposit crypto to top up your BlueSea wallet",
-    content: `
-<p><strong>What it is</strong><br/>Crypto Support allows users to fund their BlueSea wallet using supported cryptocurrencies. Deposits are converted into NGN (or platform credit) via integrated exchange rails, giving users another channel to top up and pay for services, especially for cross-border remittances and crypto-enabled flows.</p>
-
-<p><strong>How it works</strong><br/>Users can select 'Deposit via crypto' and pick a supported token (e.g., BTC, USDT, or selected ERC-20 tokens depending on BlueSea’s policy). The app generates a deposit address (custodial wallet) and shows the required confirmations and conversion rate. Upon network confirmation, BlueSea executes an on-ramp conversion (via partner exchange or aggregator) and credits NGN to the user’s wallet. Withdrawals and conversions follow KYC/AML rules; fee and settlement windows are shown up front. For advanced users, BlueSea may offer on-chain proofs and transaction history for auditability.</p>
-
-<p><strong>Why it's useful</strong><br/>Crypto deposits open BlueSea to a global inflow of funds (diaspora remittances, crypto-native users) and provides flexibility for users who prefer digital assets. It also differentiates BlueSea in markets where crypto adoption is growing and gives a competitive edge for cross-border payers and merchants accepting crypto-funded wallets.</p>
-`
-  }
 };
 
   // Modal open/close - guard DOM references
