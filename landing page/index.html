@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BlueSea Mobile — Join Waitlist</title>
+  <meta name="description" content="BlueSea Mobile — Airtime buyback, group payments, loyalty marketplace and more. Join the Westlist Fund."/>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/logo.png">
+</head>
+<body>
+  <!-- ===== Header (logo left box, centered title hidden on small, auth right) ===== -->
+  <header class="topbar" role="banner">
+    <div class="header-left">
+      <div class="logo-box" aria-hidden="false">
+        <!-- Replace this with your logo SVG or <img src="logo.svg" alt="BlueSea Mobile logo"> -->
+        <img class="logo-img" src="img/logo.png" alt="BlueSea Mobile logo">
+      </div>
+      <!-- small tagline visible on larger screens -->
+      <div class="header-meta">
+        <div class="brand-title">BlueSea Mobile</div>
+        <div class="brand-slogan">The Trusted Way To Stay Connected.</div>
+      </div>
+    </div>
+    
+    <div class="header-right">
+      <button id="signin" class="btn-link" aria-label="Sign in">Sign in</button>
+      <button id="signup" class="btn-link" aria-label="Login">Login</button>
+    </div>
+  </header>
+
+  <!-- ===== HERO (panel 1) ===== -->
+  <main>
+    <section id="panel-hero" class="panel" aria-label="Hero">
+      <div class="container hero" role="region" aria-labelledby="hero-title">
+        <h1 id="hero-title">BlueSea Mobile — Join the Waitlist Today</h1>
+        <p>Buy, return, split and manage airtime &amp; data with the smartest wallet for Africa. Airtime buyback, group payments, offline purchase and AI-guided recommendations — all in one place.</p>
+
+        <!-- Replaced invalid <button><a> with a single anchor styled as a button -->
+        <a
+          href="https://luma.com/event/evt-Q0OEHC5G5Rvu2p5"
+          class="join-btn luma-checkout--button"
+          data-luma-action="checkout"
+          data-luma-event-id="evt-Q0OEHC5G5Rvu2p5"
+          role="button"
+          aria-haspopup="dialog"
+        >
+          Join Waitlist
+        </a>
+        <!-- include the luma widget only once -->
+        <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
+
+        <div class="join-sub">Early sign-ups get priority access. (You decide the next step after clicking)</div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES (panel 2) - many compact lines (8) ===== -->
+    <section id="panel-features" class="panel" aria-label="Features">
+      <div class="container features-wrap">
+        <h2 class="features-heading">What BlueSea Mobile offers</h2>
+        <p class="features-intro">Tap any feature to read a detailed explanation (a small modal appears).</p>
+
+        <div class="features-grid" id="features-grid" role="list">
+          <!-- 8 feature items compact (left-right alternating) -->
+          <div class="feature-item" data-feature="airtime-buyback" tabindex="0" role="button" aria-pressed="false">
+            <div class="icon-wrap" aria-hidden="true">
+              <!-- small svg -->
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18"/><path d="M7 7h10v10H7z"/><path d="M11 10h2v2h-2z"/></svg>
+            </div>
+            <div>
+              <div class="feat-title">Airtime Buyback</div>
+              <div class="feat-desc">Return unused airtime for platform credit — flexible and simple.</div>
+            </div>
+          </div>
+
+          <div class="feature-item right" data-feature="group-payment" tabindex="0" role="button" aria-pressed="false">
+            <div class="icon-wrap" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="2"/><circle cx="16" cy="8" r="2"/><path d="M4 18c2-3 6-4 8-4s6 1 8 4"/></svg>
+            </div>
+            <div>
+              <div class="feat-title">Group Payment</div>
+              <div class="feat-desc">Pool funds under a code and pay one bill — easy splitting.</div>
+            </div>
+          </div>
+
+          <div class="feature-item" data-feature="loyalty-marketplace" tabindex="0" role="button" aria-pressed="false">
+            <div class="icon-wrap" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.8 6.2L22 10l-5 3.8L18 22 12 18.2 6 22l1-8.2L2 10l7.2-1.8L12 2z"/></svg>
+            </div>
+            <div>
+              <div class="feat-title">Loyalty Marketplace</div>
+              <div class="feat-desc">Earn points for every transaction; spend in our marketplace.</div>
+            </div>
+          </div>
+
+          <div class="feature-item right" data-feature="spend-analysis" tabindex="0" role="button" aria-pressed="false">
+            <div class="icon-wrap" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 12v6M12 6v12M17 9v9"/></svg>
+            </div>
+            <div>
+              <div class="feat-title">Spend Analysis</div>
+              <div class="feat-desc">Smart breakdowns of airtime & data usage across categories.</div>
+            </div>
+          </div>
+
+          <div class="feature-item" data-feature="offline-purchase" tabindex="0" role="button" aria-pressed="false">
+            <div class="icon-wrap" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6"/><path d="M7 10l5 5 5-5"/></svg>
+            </div>
+            <div>
+              <div class="feat-title">Offline Purchase</div>
+              <div class="feat-desc">Buy and queue transactions even when you are offline.</div>
+            </div>
+          </div>
+
+          <div class="feature-item right" data-feature="ai-assistant" tabindex="0" role="button" aria-pressed="false">
+            <div class="icon-wrap" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 14h8M8 10h8"/></svg>
+            </div>
+            <div>
+              <div class="feat-title">AI Assistance</div>
+              <div class="feat-desc">AI-powered guidance: recommendations & fast navigation.</div>
+            </div>
+          </div>
+
+          <div class="feature-item" data-feature="qr-purchases" tabindex="0" role="button" aria-pressed="false">
+            <div class="icon-wrap" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3"/></svg>
+            </div>
+            <div>
+              <div class="feat-title">QR Code Purchases</div>
+              <div class="feat-desc">Scan to buy — fast, accurate and less typing.</div>
+            </div>
+          </div>
+
+          <div class="feature-item right" data-feature="crypto-support" tabindex="0" role="button" aria-pressed="false">
+            <div class="icon-wrap" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M10 8h4M9 16h6M12 6v12"/></svg>
+            </div>
+            <div>
+              <div class="feat-title">Cryptocurrency Support</div>
+              <div class="feat-desc">Deposit crypto to top up wallets — safe and modern.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout">
+          <div style="font-weight:700">Ready to get access?</div>
+          <div class="callout-actions">
+
+            <!-- Replaced nested button+anchor with single anchor styled as button (no duplicate script) -->
+            <a
+              href="https://luma.com/event/evt-Q0OEHC5G5Rvu2p5"
+              class="join-btn luma-checkout--button"
+              data-luma-action="checkout"
+              data-luma-event-id="evt-Q0OEHC5G5Rvu2p5"
+              role="button"
+              aria-haspopup="dialog"
+            >
+              Join Waitlist
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Minimal modal markup (script expects these elements) -->
+    <div id="overlay" class="overlay" aria-hidden="true" role="dialog">
+      <div id="modal" class="modal" role="document">
+        <button id="modal-close" class="close-btn" aria-label="Close">✕</button>
+        <h3 id="modal-title"></h3>
+        <div id="modal-meta" class="meta"></div>
+        <div id="modal-content" class="content" tabindex="-1"></div>
+      </div>
+    </div>
+
+   <footer class="container">
+
+  <section>
+    <div  id="panel-contact">
+      <h2 class="footer-title line1">BlueSea Mobile</h2>
+      <p class="line2">The Trusted way to stay connected</p>
+
+      <p class="line3">Contact Us: <a href="mailto:blueseamobile5@gmail.com"> blueseamobile5@gmail.com</a></p>
+      <p class="line4">WhatsApp: <a href="https://wa.me/2348078019755"> +2348078019755</a></p>
+
+  <section class="line5">
+    <a href="https://youtube.com/@blueseamobile?si=0Q5DmyvP0WIFyiFd"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="20" height="20">
+      <path d="M581.7 188.1C575.5 164.4 556.9 145.8 533.4 139.5C490.9 128 320.1 128 320.1 128C320.1 128 149.3 128 106.7 139.5C83.2 145.8 64.7 164.4 58.4 188.1C47 231 47 320.4 47 320.4C47 320.4 47 409.8 58.4 452.7C64.7 476.3 83.2 494.2 106.7 500.5C149.3 512 320.1 512 320.1 512C320.1 512 490.9 512 533.5 500.5C557 494.2 575.5 476.3 581.8 452.7C593.2 409.8 593.2 320.4 593.2 320.4C593.2 320.4 593.2 231 581.8 188.1zM264.2 401.6L264.2 239.2L406.9 320.4L264.2 401.6z"/></svg></a>
+
+    <a href="https://www.facebook.com/share/15DTkMv4cUk/?mibextid=wwXIfr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="20" height="20">
+      <path d="M576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 440 146.7 540.8 258.2 568.5L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 574.1C477.8 558.8 576 450.9 576 320z"/></svg></a>
+
+    <a href="https://www.tiktok.com/@bluesea_mobile?_t=ZS-8yzRBvJCWll&_r=1">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="20" height="20">
+        <path d="M544.5 273.9C500.5 274 457.5 260.3 421.7 234.7L421.7 413.4C421.7 446.5 411.6 478.8 392.7 506C373.8 533.2 347.1 554 316.1 565.6C285.1 577.2 251.3 579.1 219.2 570.9C187.1 562.7 158.3 545 136.5 520.1C114.7 495.2 101.2 464.1 97.5 431.2C93.8 398.3 100.4 365.1 116.1 336C131.8 306.9 156.1 283.3 185.7 268.3C215.3 253.3 248.6 247.8 281.4 252.3L281.4 342.2C266.4 337.5 250.3 337.6 235.4 342.6C220.5 347.6 207.5 357.2 198.4 369.9C189.3 382.6 184.4 398 184.5 413.8C184.6 429.6 189.7 444.8 199 457.5C208.3 470.2 221.4 479.6 236.4 484.4C251.4 489.2 267.5 489.2 282.4 484.3C297.3 479.4 310.4 469.9 319.6 457.2C328.8 444.5 333.8 429.1 333.8 413.4L333.8 64L421.8 64C421.7 71.4 422.4 78.9 423.7 86.2C426.8 102.5 433.1 118.1 442.4 131.9C451.7 145.7 463.7 157.5 477.6 166.5C497.5 179.6 520.8 186.6 544.6 186.6L544.6 274z"/></svg> </a>
+
+    <a href="https://x.com/blueseamobile?s=21"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="20" height="20">
+      <path d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z"/></svg></a>
+
+    <a href="https://"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="20" height="20">
+      <path d="M196.3 512L103.4 512L103.4 212.9L196.3 212.9L196.3 512zM149.8 172.1C120.1 172.1 96 147.5 96 117.8C96 103.5 101.7 89.9 111.8 79.8C121.9 69.7 135.6 64 149.8 64C164 64 177.7 69.7 187.8 79.8C197.9 89.9 203.6 103.6 203.6 117.8C203.6 147.5 179.5 172.1 149.8 172.1zM543.9 512L451.2 512L451.2 366.4C451.2 331.7 450.5 287.2 402.9 287.2C354.6 287.2 347.2 324.9 347.2 363.9L347.2 512L254.4 512L254.4 212.9L343.5 212.9L343.5 253.7L344.8 253.7C357.2 230.2 387.5 205.4 432.7 205.4C526.7 205.4 544 267.3 544 347.7L544 512L543.9 512z"/></svg></a>
+  </section>
+
+       <p class="line6"> <a href="legal.html">Legal</a>  • <a href="privacy.html">Privacy</a>  • <a href="terms.html">Terms</a> </p>
+
+      <h6 class="line7"><p> &copy; <span id="year"></span> BlueSea Mobile All Rights Reserved</p></h6>
+    </div>
+  </section>
+
+  
+</footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

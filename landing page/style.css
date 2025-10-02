@@ -1,0 +1,781 @@
+/* --------------------
+       BlueSea Landing Page
+       Single-file copyable prototype
+       Replace --brand-blue with your exact hex from the ZIP
+       Replace .logo-img content with your logo SVG or <img src="...">
+       -------------------- */    
+    
+:root{
+      --brand-blue: #0b63ff; /* <-- replace with your exact brand blue */
+      --white: #ffffff;
+      --muted: #64748b;
+      --bg: #f6fbff;
+      --panel-2-bg: #ffffff;
+      --footer-bg: linear-gradient(180deg,#f2f7ff,#ebf4ff);
+      --glass: rgba(255,255,255,0.85);
+      --radius: 16px;
+      --max-width: 1100px;
+      --shadow: 0 8px 30px rgba(11,99,255,0.08);
+      --ease: cubic-bezier(.2,.9,.25,1);
+    }
+
+html,body{height:100%}
+
+
+/* ------------------------
+   Legal pages styles (add to your existing style.css)
+   Scoped and namespaced for safety
+   ------------------------ */
+
+.legal-page {
+   min-height: 100vh;
+   position: relative;
+   padding-bottom: 180px; 
+  /* allow space for fixed footer */ }
+
+.legal-header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding: 16px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(11,99,255,0.06);
+  box-shadow: 0 6px 18px rgba(11,99,255,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 120;
+}
+
+.legal-brand {
+   display:flex;
+   align-items:center;
+   gap:12px;
+ }
+
+.legal-logo {
+   width:54px;
+   height:54px;
+   object-fit:contain;
+   border-radius:10px;
+ }
+
+.legal-brand-title {
+   font-weight:700;
+    color:var(--brand-blue);
+    font-size:18px; 
+}
+
+.legal-brand-sub { 
+  font-size:12px;
+   color:var(--muted);
+ }
+
+.legal-actions {
+   display:flex; 
+  gap:8px; 
+  align-items:center; 
+}
+
+.legal-back {
+  display:inline-block;
+  padding:8px 12px;
+  border-radius:10px;
+  border:1px solid var(--brand-blue);
+  color:var(--brand-blue);
+  background:transparent;
+  font-weight:600;
+  text-decoration:none;
+}
+.legal-back:hover { 
+  background:var(--brand-blue);
+   color:#fff;
+ }
+
+/* main content */
+.legal-main {
+   max-width: 1100px;
+   margin: 28px auto;
+   padding: 0 18px;
+ }
+.legal-article {
+   background: transparent; 
+  color:#213444;
+ }
+.legal-article h1 { 
+  font-size:28px;
+   color:var(--brand-blue);
+   margin-bottom:8px; 
+}
+.legal-effective { 
+  color:var(--muted);
+   margin-bottom:18px;
+ }
+.legal-article h2 { 
+  font-size:18px;
+   margin-top:20px;
+   margin-bottom:8px;
+   color:#213444; 
+}
+.legal-article p, .legal-article li { 
+  font-size:15px;
+   line-height:1.6;
+   margin-bottom:12px; 
+  color:#213444;
+ }
+.legal-article ul, .legal-article ol { 
+  margin-left:20px;
+   margin-bottom:12px;
+ }
+
+/* article footer note */
+.legal-article-footer {
+   margin-top:18px;
+   padding-top:12px; 
+  border-top:1px dashed rgba(11,99,255,0.06);
+   color:var(--muted); 
+}
+
+/* ensure footer content flows nicely on small screens */
+.legal-page footer.container #panel-contact {
+   max-width: 1100px;
+   margin: 0 auto;
+   text-align: center;
+ }
+.legal-page footer.container .line1 { 
+  margin-bottom:6px;
+   font-size:18px; 
+  color:var(--brand-blue);
+ }
+.legal-page footer.container .line2, 
+.legal-page footer.container .line3,
+.legal-page footer.container .line4,
+.legal-page footer.container .line6 { 
+  color:var(--muted); 
+  margin:4px 0;
+   font-size:13px; 
+}
+
+/* small screens */
+@media (max-width:720px){
+  .legal-main {
+     padding: 0 12px;
+     margin:20px auto;
+   }
+  .legal-header { 
+    padding:12px; 
+  }
+  .legal-back {
+     padding:6px 10px; 
+    font-size:14px; 
+  }
+  .legal-page {
+     padding-bottom:220px;
+   } /* more footer space on small screens */
+}
+
+/* accessible focus states */
+.legal-back:focus { 
+  outline: 3px solid rgba(11,99,255,0.12); 
+  outline-offset: 2px; 
+}
+
+
+
+/* code for the footer*/
+.footer-main{
+  width: 100%;
+  left:0;
+  right:0;
+  bottom:0;
+  height:auto;
+  padding-top:12px;
+  background: var(--footer-bg);
+  display:flex;
+  justify-content:center;
+  text-align: center;
+}
+
+.line1{
+line-height: 0.5;
+}
+
+.line2{
+line-height: 1;
+font-size: 15px;
+}
+
+.line3{
+line-height: 0.5;
+}
+
+.line4{
+line-height: 0.5;
+}
+
+.line5{
+line-height: 0.5;
+}
+
+.line6{
+line-height: 0.5;
+}
+
+/* Reset / typography */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,var(--bg),#ffffff);
+  color:#07203a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+.logo-img {
+  height:60px;
+  width:60px;
+}
+
+a{color:var(--brand-blue); text-decoration:none}
+
+/* ------------------------
+   Header: left logo box, center title, right auth links
+   ------------------------ */
+header.topbar{
+  position:fixed;
+  top:12px;
+  left:12px;
+  right:12px;
+  height:68px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:8px 18px;
+  z-index:200;
+  background: rgba(255,255,255,0.85);
+  border-radius:14px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(11,99,255,0.06);
+  backdrop-filter: blur(6px);
+}
+.header-left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-box{
+  width:56px;
+  height:56px;
+  border-radius:12px;
+  background:linear-gradient(180deg,var(--white),#f4f8ff);
+  border:1px solid rgba(11,99,255,0.06);
+}
+.logo-box .logo-img{
+  font-weight:700;
+  color:var(--brand-blue); 
+  font-size:18px;
+}
+
+/* Title in center */
+/* Moved inline styles from HTML -> use these classes in markup */
+.header-meta{
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+}
+.header-meta .brand-title{
+  font-weight:700;
+  color:var(--brand-blue);
+  font-size:13px;
+}
+.header-meta .brand-slogan{
+  font-size:11px;
+  color:var(--muted);
+}
+
+.brand-title{font-weight:700;
+  color:var(--brand-blue);
+  font-size:16px;
+}
+
+.brand-slogan{font-size:12px;
+  color:var(--muted)
+}
+
+/* right navigation */
+.header-right{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.btn-link{
+  padding:8px 12px;
+  border-radius:10px;
+  background:transparent;
+  border:1px solid transparent;
+  font-weight:700;
+  color:var(--brand-blue);
+  cursor:pointer;
+}
+
+.btn-link:hover{
+  background-color:var(--brand-blue);
+  color: white;
+}
+
+.btn-link.secondary{
+  background:transparent;
+}
+
+.btn-link:focus{outline:2px solid rgba(11,99,255,0.12);outline-offset:2px;
+}
+
+/* ------------------------
+   Panels - visible splits
+   Each panel has a different background or visual divider
+   ------------------------ */
+.panel{
+  min-height:100vh;
+  padding:10px 18px 2px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+/* Reduce only hero panel height so Panel1 and Panel2 are closer (moderate gap).
+   This change intentionally overrides the .panel min-height for the hero only. */
+#panel-hero {
+  min-height:85vh; /* reduced from 100vh for a smaller vertical gap between panels */
+}
+
+.container{
+  width:100%;
+  max-width:var(--max-width);
+  margin:0 auto;
+  text-align: center;
+}
+
+/* Visible split styles: add a clear divider between panels */
+#panel-hero{
+  background: linear-gradient(180deg,#f8fbff,#ffffff); 
+  box-shadow: inset 0 -40px 80px rgba(11,99,255,0.02);
+}
+
+/* slightly reduced top padding on features to bring panels closer together */
+#panel-features{
+  background: var(--panel-2-bg); 
+  border-top: 6px solid rgba(11,99,255,0.03); 
+  padding-top:48px; /* reduced from 80px for a moderate gap */
+}
+
+/* Panel 3 (footer / contact) — give it a footer-style background that matches the site.
+   Moved from previous gradient to the brand footer variable. */
+#panel-contact {
+  background: var(--footer-bg);
+  border-top:6px solid rgba(11,99,255,0.02);
+  padding:28px 12px;
+  color:var(--muted);
+}
+
+/* Also ensure the footer <footer class="container"> has comfortable padding and sits with the panel */
+footer.container {
+  background: transparent; /* panel-contact provides the footer bg */
+  padding: 18px 12px 36px;
+}
+
+/* ------------------------
+   HERO content
+   ------------------------ */
+.hero{
+  display:flex;
+  gap:32px;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+  padding-top:10px;
+}
+
+.hero h1{
+  font-size:40px;
+  margin:0;
+  color:var(--brand-blue);
+  line-height:1.02;
+}
+
+.hero p{
+  max-width:760px;
+  margin:12px auto 20px;
+  color:var(--muted);
+  font-size:15px;
+}
+
+/* Make join-btn applicable to both <a> and <button> */
+a.join-btn, button.join-btn {
+  display:inline-block;
+  padding:16px 34px;
+  background:linear-gradient(90deg,var(--brand-blue),#0a52d8);
+  color:#fff;
+  border-radius:14px;
+  font-weight:800;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  box-shadow:0 12px 30px rgba(11,99,255,0.18);
+  transition:transform .12s var(--ease),opacity .12s var(--ease);
+}
+.join-sub{
+  font-size:13px;
+  color:var(--muted);
+  margin-top:10px;
+}
+
+.join-btn:focus{
+   outline: 3px solid rgba(11,99,255,0.12); 
+   outline-offset:3px;
+  }
+
+.join-btn:hover{ 
+  transform: translateY(-2px); 
+  opacity:0.98; 
+}
+
+/* hero icons row */
+.hero-icons{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  justify-content:center;
+  margin-top:24px;
+}
+
+.hero-icon{
+  width:86px;
+  height:86px;
+  border-radius:14px;
+  background:var(--white);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(11,99,255,0.04);
+}
+
+.hero-icon svg{
+  width:46px;
+  height:46px;
+}
+
+/* ------------------------
+   Features grid: compact lines, 8 items
+   ------------------------ */
+.features-wrap{padding:6px}
+.features-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:18px;
+  align-items:start;
+}
+
+/* Move svg color for feature icons (previously inline) */
+.feature-item svg {
+   color: var(--brand-blue);
+   stroke: currentColor; 
+}
+
+
+/* moved inline transitions / transforms remain unchanged */
+.feature-item{
+  display:flex;
+  gap:12px;
+  padding:14px;
+  border-radius:12px;
+  background:linear-gradient(180deg,#ffffff,#fbfcff);
+  align-items:center;
+  border:1px solid rgba(11,99,255,0.04);
+  box-shadow:var(--shadow);cursor:pointer;
+  transform:translateX(-26px);
+   opacity:0; 
+  transition:transform .62s var(--ease), opacity .62s var(--ease);
+}
+
+.feature-item.right{
+  transform:translateX(26px)
+}
+
+.feature-item.in-view
+{transform:translateX(0);
+  opacity:1
+}
+
+.feature-item .icon-wrap{
+  width:56px;
+  height:56px;
+  border-radius:10px; 
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+
+.feat-title{
+  font-weight:700
+}
+
+.feat-desc{
+  font-size:13px;
+  color:var(--muted);
+  margin-top:6px
+}
+
+/* features heading + intro (moved from inline HTML attributes) */
+.features-heading{
+  text-align:center;
+  color:var(--brand-blue);
+  margin:0 0 10px;
+  font-size:22px;
+}
+.features-intro{
+  text-align:center;
+  color:var(--muted);
+  margin:0 auto 20px;
+  max-width:760px;
+}
+
+/* callout strip */
+/* callout margin-top moved to CSS — any inline margin removed from HTML */
+.callout{
+  margin-top:22px;
+  padding:16px;
+  border-radius:12px;
+  background:linear-gradient(90deg, rgba(11,99,255,0.06), rgba(10,200,255,0.03));
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap
+}
+
+/* helper for the callout inner actions (moved from inline) */
+.callout-actions{display:flex;gap:8px;align-items:center}
+
+/* ------------------------
+   Footer fixed to bottom with different bg and social SVGs
+   ------------------------ */
+footer.fixed-footer{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  height:78px;
+  padding:12px 20px;
+  background: var(--footer-bg);
+  border-top:1px solid rgba(11,99,255,0.06);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:300;
+  box-shadow: 0 -10px 30px rgba(11,99,255,0.03);
+  transition:transform .36s var(--ease);
+  transform:translateY(0);
+}
+.footer-inner{
+  width:100%;
+  max-width:var(--max-width);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px
+}
+
+.footer-left{
+  color:var(--muted)
+}
+
+.footer-right{
+  display:flex;
+  gap:10px;
+  align-items:center
+}
+
+.social-icon{
+  width:40px;
+  height:40px;
+  border-radius:10px;
+  background:var(--white);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(11,99,255,0.06);
+  box-shadow:var(--shadow);
+  text-decoration:none
+}
+
+/* Footer container layout and spacing (improves congested downside) */
+.footer-main .container {
+  max-width: var(--max-width);
+  display: flex;
+  gap:18px;
+  align-items:flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 18px 12px;
+}
+
+/* Footer columns */
+#panel-contact {
+   padding: 28px 12px;
+ }
+
+.footer-title {
+   margin: 0 0 6px;
+   font-size:18px; 
+}
+
+.footer-main p {
+   margin:6px 0; 
+  color:var(--muted)
+ }
+
+/* Social icons row adjustments */
+.footer-main section { 
+  display:flex;
+   gap:10px;
+   align-items:center;
+   justify-content:flex-start; 
+  flex-wrap:wrap;
+   margin:12px 0; 
+}
+
+.footer-main svg { 
+  width:18px; 
+  height:18px;
+   display:block;
+ }
+
+.footer-main a svg { 
+  display:block; 
+}
+
+/* Make social icon boxes slightly smaller */
+.social-icon { 
+  width:36px; 
+  height:36px; 
+  border-radius:10px; 
+}
+
+/* mobile / responsive */
+@media (max-width:880px){
+  .features-grid{
+    grid-template-columns:1fr
+  }
+
+  .hero h1{
+    font-size:30px
+  }
+
+  header.topbar{
+    height:72px;
+    padding:8px 12px
+  }
+
+  .header-center{
+    display:none
+  } /* reduce clutter on small screens */
+}
+@media (max-width:520px){
+  .hero p{
+    padding:0 10px
+  }
+  
+  .logo-box{
+    width:48px;
+    height:48px
+  }
+  
+  .social-icon{
+    width:36px;
+    height:36px
+  }
+  
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *{
+    transition:none!important;
+    animation:none!important
+  }
+}
+
+/* Modal styles */
+.overlay{
+  position:fixed
+  ;inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background:rgba(3,6,12,0.45);
+  z-index:500;
+  padding:18px
+}
+
+.overlay.show{
+  display:flex;
+  animation:fadeIn .18s ease
+}
+
+.modal{
+  width:100%;
+  max-width:860px;
+  background:var(--white);
+  border-radius:14px;
+  padding:20px;
+  box-shadow:0 20px 60px rgba(10,15,40,0.12);
+  max-height:78vh;
+  overflow:auto;
+  transform:translateY(12px);
+  opacity:0;
+  transition:all .25s var(--ease)
+}
+
+.overlay.show .modal{
+  transform:translateY(0);
+  opacity:1
+}
+
+.modal h3{
+  margin:0 0 6px;
+  color:var(--brand-blue)
+}
+
+.modal .meta{
+  color:var(--muted);
+  font-size:13px;
+  margin-bottom:10px
+}
+
+.modal .content p{
+  color:#213444;
+  line-height:1.6;
+  font-size:15px
+}
+
+.close-btn{
+  position:absolute;
+  right:20px;
+  top:18px;
+  background:#fff;
+  border:0;
+  padding:6px;
+  border-radius:10px;
+  cursor:pointer;
+  box-shadow:0 6px 20px rgba(10,15,40,0.06)
+}
+
+/* small, non-invasive animation */
+@keyframes fadeIn{
+  from{opacity:0}to{opacity:1}
+}
