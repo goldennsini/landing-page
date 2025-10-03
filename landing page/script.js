@@ -91,6 +91,23 @@
 `
   },
 
+  "smart-auto-topup": {
+  title: "Smart Auto Top-Up",
+  meta: "Auto-refill wallet or data when needed",
+  content: `
+<p><strong>What it is</strong><br/>
+A simple automation that tops up a user's wallet or data when predefined conditions are met (low balance, scheduled times, or predicted need).</p>
+
+<p><strong>How it works</strong><br/>
+Set a rule (e.g., top up ₦500 when balance < ₦200) or enable predictive mode. The system checks balances and either suggests or performs the refill using your chosen funding source.</p>
+
+<p><strong>Why it's useful</strong><br/>
+Prevents service outages, saves time, and keeps users connected without remembering to top up manually.</p>
+
+<p><strong>What you need to do</strong><br/>
+Choose a trigger (threshold, schedule, or predictive), pick a funding source, and set a monthly cap if you want spend control. First suggestion requires confirmation; later top-ups can run automatically.</p>`
+}
+
 };
 
   // Modal open/close - guard DOM references
