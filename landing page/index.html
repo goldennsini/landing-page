@@ -40,16 +40,7 @@
     <div class="LP_header_inner">
       <div class="LP_brand">
         <!-- Logo mark (inline SVG) -->
-        <svg class="LP_logo" width="48" height="32" viewBox="0 0 48 32" aria-hidden="true" focusable="false">
-          <defs>
-            <linearGradient id="lp-grad" x1="0" x2="1">
-              <stop offset="0" stop-color="#1fb6ff"/>
-              <stop offset="1" stop-color="#0f62fe"/>
-            </linearGradient>
-          </defs>
-          <rect rx="6" width="48" height="32" fill="url(#lp-grad)"></rect>
-          <text x="50%" y="60%" font-family="Poppins, sans-serif" font-weight="700" font-size="14" text-anchor="middle" fill="#fff">BS</text>
-        </svg>
+        <img src="img/logo.png" alt="logo" width="48" height="32">
         <div class="LP_brand_text">
           <div class="LP_brand_title">BlueSea Mobile</div>
           <div class="LP_brand_sub">The Trusted way to stay connected</div>
@@ -64,7 +55,7 @@
         </ul>
       </nav>
 
-      <div class="LP_header_cta">
+      <div class="LP_header_cta" onclick="location.href='../login_signup/login_signup.html'">
         <button class="LP_sign_in" type="button" aria-label="Sign in">Sign in</button>
       </div>
     </div>
@@ -87,25 +78,6 @@
           </div>
         </div>
 
-        <div class="LP_hero_visual" aria-hidden="true">
-          <!-- Phone mockup image placeholder (replace with your phone.png in same directory) -->
-          <div class="LP_phone_frame">
-            <img src="img/phone.png" alt="BlueSea mobile app mockup (placeholder)" class="LP_phone_image" />
-          </div>
-
-          <!-- Decorative avatars (imported from web - DiceBear SVGs) -->
-          <div class="LP_avatars_left">
-            <img class="LP_avatar_img" src="img/avater1.png" alt="avatar 1">
-            <img class="LP_avatar_img" src="img/avater2.jpg" alt="avatar 2">
-            <img class="LP_avatar_img" src="img/avater3.png" alt="avatar 3">
-          </div>
-
-          <div class="LP_avatars_right">
-            <img class="LP_avatar_img" src="img/avater1.png" alt="avatar 4">
-            <img class="LP_avatar_img" src="img/avater2.jpg" alt="avatar 5">
-            <img class="LP_avatar_img" src="img/avater3.png" alt="avatar 6">
-          </div>
-        </div>
       </div>
     </section>
 
@@ -174,10 +146,7 @@
   <footer class="LP_footer" role="contentinfo">
     <div class="LP_footer_inner">
       <div class="LP_footer_brand">
-        <svg class="LP_logo_small" width="48" height="36" viewBox="0 0 48 32" aria-hidden="true">
-          <rect rx="6" width="48" height="32" fill="#dff2ff"></rect>
-          <text x="50%" y="60%" font-family="Poppins, sans-serif" font-weight="700" font-size="12" text-anchor="middle" fill="#0f62fe">BS</text>
-        </svg>
+        <img src="img/logo.png" alt="logo" width="48" height="32">
         <div class="LP_footer_titles">
           <div class="LP_footer_title">BlueSea Mobile</div>
           <div class="LP_footer_tag">The Trusted way to stay connected</div>
@@ -185,12 +154,7 @@
       </div>
 
       <div class="LP_footer_links">
-        <nav class="LP_footer_nav" aria-label="Footer">
-          <a href="#" class="LP_footer_link">Legal</a>
-          <a href="#" class="LP_footer_link">Privacy</a>
-          <a href="#" class="LP_footer_link">Terms</a>
-        </nav>
-
+        
         <div class="LP_social">
           <a class="LP_social_link" href="https://youtube.com/@blueseamobile?si=0Q5DmyvP0WIFyiFd" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="20" height="20">
@@ -213,7 +177,14 @@
       <path d="M196.3 512L103.4 512L103.4 212.9L196.3 212.9L196.3 512zM149.8 172.1C120.1 172.1 96 147.5 96 117.8C96 103.5 101.7 89.9 111.8 79.8C121.9 69.7 135.6 64 149.8 64C164 64 177.7 69.7 187.8 79.8C197.9 89.9 203.6 103.6 203.6 117.8C203.6 147.5 179.5 172.1 149.8 172.1zM543.9 512L451.2 512L451.2 366.4C451.2 331.7 450.5 287.2 402.9 287.2C354.6 287.2 347.2 324.9 347.2 363.9L347.2 512L254.4 512L254.4 212.9L343.5 212.9L343.5 253.7L344.8 253.7C357.2 230.2 387.5 205.4 432.7 205.4C526.7 205.4 544 267.3 544 347.7L544 512L543.9 512z"/></svg>
           </a>
         </div>
-      </div>
+      
+
+    <nav class="LP_footer_nav" aria-label="Footer">
+          <a href="legal.html" class="LP_footer_link">Legal</a>
+          <a href="privacy.html" class="LP_footer_link">Privacy</a>
+          <a href="terms.html" class="LP_footer_link">Terms</a>
+        </nav>
+</div>
     </div>
 
     <div class="LP_footer_bottom">
